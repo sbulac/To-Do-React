@@ -1,4 +1,4 @@
-**REACT.js**
+# Aprendiendo React.js
 
 # ¿Cómo funciona React?
    React es una libreria de JavaScript que nos srive para crear páginas en base a los *componentes,* estos componentes son reutilizables por lo que los podremos usar cuando queramos. Los archivos que lee *react* son de tipo _jsx_ (JavaScript XML). En *react* tenemos lo que son los componentes y los elementos, todo esto para por una "fabrica" de React que transforma todos nuestros archivos _jsx_ a HTML, CSS y JavaScript. Renderizando así todo el código que escribimos en nuestra página.
@@ -32,3 +32,12 @@
 
 # 5. Los estados derviados
    Básicamente los *estados derivados* son estados almacenados en variables a partir de estados creados con useState. Puede sonar confuzo pero es básicamente tomar una parte en específico de un estado para que la podamos utilizar en cualquier parte.
+
+# 6. Iconos en reac
+   Podemos utilizar diferentes herramientas para implementar iconos en react. La herramienta que estaremos utilizando para implementar iconos en nuestra aplicación es: `react-icons`.
+
+   **Página de react-icons (icons):** https://react-icons.github.io/react-icons/icons?name=ti
+   **Página de react-icons (npm):** https://www.npmjs.com/package/react-icons
+
+# 7. Local Storage
+   El *localStorage*
