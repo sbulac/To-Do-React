@@ -96,7 +96,7 @@
 
    Supongamos que cada uno de esos `console.log()` se demora el timepo del comentario que tienen al lado, en total son 8.5s, ahora cada vez que un **estado** se actualiza toda la página se debe de renderizar otra vez, por lo que se puede decir que cada vez que un **estado** se actualiza la se demora 8.5s en ejecutar todo de nuevo. Sin embargo si ejecutamos el siguiente código:
 
-    ```
+   ```
       import { useState, useEffect } from "react"
 
       function App() {
