@@ -77,6 +77,7 @@
    Los **efectos de react** son un método el cual nos ayuda a controlar el problema de la **lógica pesada**, pero ¿Qué quiere decir eso? Recordemos el concepto de los **estados** o **useState** y es que cada vez que cambia el estado toda la página se vuelve a renderizar (se ejecuta todo el código de nuevo) por lo que se volvería a ejecutar nuestra **lógica pesada** por ende tendríamos una mala experiencia de usuario, digamos que toda nuestra **lógica pesada** se demora en ejecutarse _7s_ así que cada vez que cambia el **estado** tenemos que esperar esos _7s_ ahí es donde entra los **estados** o **useEffect.**
 
    Tenemos el siguiente ejemplo
-  ___
+  ````
+  
   HOLAAAAAAAAAAAAA
-  ___
+  ````
