@@ -4,11 +4,12 @@ import TodoList from '../TodoList';
 import TodoSearch from '../TodoSearch';
 import CreateTodoBtn from '../CreateTodoBtn';
 import useLocalStorage from '../hooks/useLocalStorage'
+import TodoItemSkeleton from '../TodoItemSkeleton';
 import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage('ToDos_v1', []) // useState que utiliza un customHook "useLocalStorage".
+  const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('ToDos_v1', []) // useState que utiliza un customHook "useLocalStorage".
 
   const [searchValue, setSearchValue] = useState('') // useState para manipular el search bar y poder filtrar el/los to-do/s.
 
@@ -45,18 +46,26 @@ function App() {
 
 
   return (
-    <>
+    <div className='bg-zinc-900 h-screen text-zinc-100 flex flex-col items-center p-16 gap-16'>
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
+        {loading && <TodoItemSkeleton />}
+        {error && <p>---error---</p>}
+        {(!loading && totalTodos === 0) && <p>No hay pendientes.</p>}
         {searchedTodos.map(item => (
-          <TodoItem key={item.text} text={item.text} state={item.state} onComplete={() => completeTodo(item.text)} onDelete={() => deleteTodo(item.text)} />
+          <TodoItem
+            key={item.text}
+            text={item.text}
+            state={item.state}
+            onComplete={() => completeTodo(item.text)}
+            onDelete={() => deleteTodo(item.text)} />
         ))}
       </TodoList>
 
       <CreateTodoBtn />
-    </>
+    </div>
   );
 }
 export default App;

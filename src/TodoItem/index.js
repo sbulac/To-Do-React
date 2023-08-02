@@ -1,5 +1,5 @@
-import { TiTick } from "react-icons/ti";
-import { TiTimes } from "react-icons/ti";
+import { TiTick } from 'react-icons/ti';
+import { TiTimes } from 'react-icons/ti';
 
 
 /**
@@ -12,25 +12,15 @@ import { TiTimes } from "react-icons/ti";
  */
 
 
+
 function TodoItem({ text, state, onComplete, onDelete }) {
   return (
-    <li>
+    <li className="flex items-center  bg-indigo-700 bg-opacity-40 w-3/6 h-14 rounded-xl relative shadow-md shadow-indigo-600/30">
       <TiTick
         onClick={onComplete}
-        style={state ? {
-          fill: "green",
-          cursor: "pointer"
-        } : {
-          fill: "black",
-          cursor: "pointer"
-        }} />
-      <span style={state ? {
-        textDecoration: 'line-through'
-      } : {
-        textDecoration: 'none'
-
-      }}>{text}</span>
-      <TiTimes style={{ fill: "red", cursor: "pointer" }} onClick={onDelete} />
+        className={state ? "fill-green-700 cursor-pointer w-12 h-12" : "fill-slate-100 cursor-pointer w-12 h-12"} />
+      <span className={state ? 'line-through text-xl italic ' : 'text-xl'}>{text}</span>
+      <TiTimes className='fill-red-600 cursor-pointer w-12 h-12 absolute -top-5 -right-4' onClick={onDelete} />
     </li>
   )
 }
