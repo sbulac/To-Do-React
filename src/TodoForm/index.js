@@ -2,24 +2,24 @@ import React, { useContext, useState } from 'react'
 import { TodoContext } from '../TodoContext'
 
 export const TodoForm = () => {
-    const { openModal, addTodo } = useContext(TodoContext)
-    const [newTodoValue, setNewTodoValue] = useState('')
+    const { openModal, addTodo } = useContext(TodoContext) // Traemos la funcion actualizadora del estado del modal, y la funcion para agregar Todos
+    const [newTodoValue, setNewTodoValue] = useState('') // Un estado para guardar el valor del Todo
 
     const onSumbit = (e) => {
-        e.preventDefault()
-        addTodo(newTodoValue)
-        openModal(false)
+        e.preventDefault() // evitamos que se reinicie la página
+        addTodo(newTodoValue) // agregamos el nuevo texto del todo y se lo enviamos a la funcion addTodo()
+        openModal(false) // cerramos el modal
     }
     const onCancel = () => {
-        openModal(false)
+        openModal(false) // cerramos el modal
     }
     const onChange = (e) => {
-        setNewTodoValue(e.target.value)
+        setNewTodoValue(e.target.value) // guardamos en el estado local el valor del textarea
     }
     return (
         <form
             onSubmit={(e) => {
-                e.preventDefault()
+                e.preventDefault() // evitamos que se reinicie la pagina
             }}
             className='flex flex-col bg-indigo-700 p-5 rounded-md w-1/3 h-64 items-center gap-4 shadow-2xl shadow-indigo-600/50'>
             <label className='text-2xl'>Escribe un Todo</label>

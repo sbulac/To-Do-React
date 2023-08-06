@@ -15,6 +15,7 @@ const TodoProvider = ({ children }) => {
     const addTodo = (text) => {
         todos.push({text: text, state: false})
         saveTodos([...todos])
+        // Agrega un nuevo todo en el useState y despues se pasan todos los todos al localStorage
     }
 
     const completedTodos = todos.filter(item => !!item.state).length // hacemos uso del metodo filter para filtrar todos los to-dos que tienen un 'state' en true

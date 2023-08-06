@@ -1,7 +1,9 @@
 import { TiPlus } from 'react-icons/ti';
 
 /**
- * "
+ * Este componente sirve para crear nuevos Todos
+ * @param {void} onModal estado del modal
+ * @param {boolean} stateModal funcion para actualizar el modal
  * @returns {component}
  */
 

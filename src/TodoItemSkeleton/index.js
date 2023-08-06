@@ -1,16 +1,3 @@
-
-
-/**
- * Componente que dicta la estructura de todos los to-dos.
- * @param {String} text texto del to-do.
- * @param {Boolean} state estado del to-do
- * @param {Function} onComplete funcion para completar el to-do disparado por un onClick
- * @param {Function} onDelete funcion para eliminar el to-do disparado por un onClick
- * @returns {component}
- */
-
-
-
 function TodoItemSkeleton() {
   return (
     <>

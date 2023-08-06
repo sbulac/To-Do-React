@@ -31,18 +31,23 @@ function App() {
                   onComplete={() => completeTodo(item.text)}
                   onDelete={() => deleteTodo(item.text)} />
               ))}
+              {/* Lógica para los estados de carga, error, cuando no hay Todos y mostrar los Todos cuando haya */}
             </TodoList>
           )}
         </TodoContext.Consumer>
 
         <TodoContext.Consumer>
           {({ openModal, modal }) => <CreateTodoBtn onModal={() => openModal()} stateModal={modal} />}
+          {/* desde el contexto le pasamos una funcion actualizadora del estado y el estado */}
         </TodoContext.Consumer>
       </div>
       <TodoContext.Consumer>
-        {({ modal }) => modal && (<Modal>
-          <TodoForm />
-        </Modal>)}
+        {({ modal }) => modal && (
+          <Modal>
+            <TodoForm />
+          </Modal>
+        )}
+        {/* Logica para activar/desactivar el modal por medio de su estado */}
       </TodoContext.Consumer>
     </TodoProvider>
   );
