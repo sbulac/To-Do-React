@@ -116,4 +116,9 @@
 
    Lo que va a pasar será que se ejecutaran nuestos `console.log()` #1, #3 y #2 en ese orden, ya que primero se ejecutará todo el código y al final el **useEffect** y ahora al cambiar de **estado** solo se ejecutarán los `console.log()` #1 y #3 por lo que se puede decir que al iniciar la página se demora en cargar *8.5s* pero si un **estado** cambia la página se demoraría en cargar solo *1.5s*.
 
-   # 11. useContext
+   # 11. El contexto (useContext)
+   El **contexto** de React es básicamente un componente que se encarga de proveer información a todos los consumidores de este. Esto nos sirve para dejar de pasar información por props y pasarlos de un componente *padre/hijo* por el contrario tendremos toda la lógica de nuestra aplicación en un archivo donde hayamos creado el contexto y lo pasaremos por medio de `nombreDelContexto.Provider` y `nombreDelContexto.Consumer`. Sin embargo también podemos utilizar la sintaxis del **useContext** que se vería algo así: `useContext(nombreDelContexto)`
+
+   # 12. Los portales (React Portals)
+   
+   Los **portales** son una caracteristica peculiar de React ya que esto nos permite crear un portal por el cual podremos *teletrasportar* componentes a un nuevo nodo de HTML. Esto nos puede servir para crear ventanas modales que cuando hagamos click en un boton se teletrasporte nuesto componente, aparezca en el nuevo nodo de HTML y con CSS podemos hacer un modal que superpone a la página principal.
