@@ -115,3 +115,5 @@
    ```
 
    Lo que va a pasar será que se ejecutaran nuestos `console.log()` #1, #3 y #2 en ese orden, ya que primero se ejecutará todo el código y al final el **useEffect** y ahora al cambiar de **estado** solo se ejecutarán los `console.log()` #1 y #3 por lo que se puede decir que al iniciar la página se demora en cargar *8.5s* pero si un **estado** cambia la página se demoraría en cargar solo *1.5s*.
+
+   # 11. useContext

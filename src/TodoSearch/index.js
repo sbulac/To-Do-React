@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { TfiSearch } from 'react-icons/tfi';
+import { TodoContext } from '../TodoContext';
 
 
 /**
@@ -8,7 +10,8 @@ import { TfiSearch } from 'react-icons/tfi';
  * @returns {component}
  */
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch() {
+    const {searchValue, setSearchValue} = useContext(TodoContext)
     return (
         <div className='w-1/3 px-4 flex flex-row-reverse justify-center items-center border border-indigo-400 rounded-xl opacity-60 shadow-2xl shadow-indigo-600/50'>
             <input

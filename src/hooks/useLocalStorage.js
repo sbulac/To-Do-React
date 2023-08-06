@@ -14,7 +14,6 @@ function useLocalStorage(itemName, initialValue) {
 
     useEffect(() => {
         setTimeout(() => {
-
             try {
                 const localStorageItem = localStorage.getItem(itemName)
 
@@ -37,7 +36,7 @@ function useLocalStorage(itemName, initialValue) {
                 setError(true)
             }
         }, 1500);
-    }, [])
+    }, [initialValue, itemName])
 
 
 
