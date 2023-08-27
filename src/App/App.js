@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <TodoProvider>
-      <div className='bg-zinc-900 h-screen text-zinc-100 flex flex-col items-center p-16 gap-16'>
+      <div className='bg-zinc-900 min-h-screen overflow-hidden text-zinc-100 flex flex-col items-center gap-6 p-2'>
         <TodoCounter />
         <TodoSearch />
 
