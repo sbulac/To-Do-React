@@ -9,7 +9,7 @@ import { TiPlus } from 'react-icons/ti';
 
 function CreateTodoBtn({ onModal, stateModal }) {
   return (
-    <div className='w-full z-10 bg-opacity-10 flex justify-center'>
+    <div className='w-full z-10 bg-opacity-10 flex justify-center absolute bottom-5'>
       <div className=' bottom-2 bg-indigo-700 rounded-full w-max p-1'>
         <TiPlus onClick={onModal} className={
           stateModal
